@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 published: true
 title: event
 order: 2
