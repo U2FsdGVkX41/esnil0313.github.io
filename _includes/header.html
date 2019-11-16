@@ -13,8 +13,8 @@
           <!--{%- assign my_page = site.pages | where: "path", path | first -%}-->
           {%- if item.name -%}
           <li class="nav-item">
-            <a class="nav-link" href="{{ item.link | relative_url }}"{% if site.pages == item.name %}style="color: white;"{% endif %}>
-              {{ item.name | first }}
+            <a class="nav-link" href="{{ item.link | relative_url }}">
+              {{ page.url| first }}
             </a>
           </li>    
           {%- endif -%}
