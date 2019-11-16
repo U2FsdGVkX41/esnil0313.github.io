@@ -1,8 +1,3 @@
----
-layout: page
-title: 
----
-
 ## Customization Guide
 
 ### Modify the configuration
