@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: esnil
 email: "esnil@fuji.waseda.jp"
-pages: daily event
+pages: All
 description: Chasing the faux.
 #>- # this means to ignore newlines until "baseurl:" 
 #baseurl: "" # the subpath of your site, e.g. /blog
