@@ -38,6 +38,8 @@ header_pages:
     link: /daily.html
   - name: Event
     link: /event.html
+  - name: Blog
+    link: /blog.html    
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
