@@ -45,4 +45,3 @@ exclude:
   - update_boostrap.sh
 
 theme: jekyll-theme-leap-day
-f
