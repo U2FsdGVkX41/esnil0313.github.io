@@ -15,19 +15,20 @@
               </a>
             </li>
           {%- endif -%}          
-          <li>
+          <!--<li>
             {{- site.description | escape -}}
             {%- if site.author -%}
               <!--{{ site.author | escape }}-->
             {%- else -%}
               <!--{{ site.title | escape }}-->
             {%- endif -%}
-          </li>
+          </li>-->
         </ul>
       </div>
 
 
       <div class="col-sm text-right">
+        <p>{{- site.description | escape -}}</p>
 <!--
         <p>
           <a href="https://nicolas-van.github.io/bootstrap-4-github-pages/">Powered by Bootstrap 4 Github Pages</a>
