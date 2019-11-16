@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 You should at least edit the `_config.yml` file to edit your website's metadata, like the title, description and repository URL.
 
 ### Change your theme
