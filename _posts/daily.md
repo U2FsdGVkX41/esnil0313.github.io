@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: default
 published: true
 title: Daily
 order: 1
