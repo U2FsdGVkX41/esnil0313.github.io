@@ -13,9 +13,7 @@
           <!--{%- assign my_page = site.pages | where: "path", path | first -%}-->
           {%- if item.name -%}
           <li class="nav-item">
-            <a class="nav-link" href="{{ item.link | relative_url }}">
-              {{ page.url| first }}
-            </a>
+            <a class="nav-link" href="{{ item.link | relative_url }}">{{ item.name| first }} </a>
           </li>    
           {%- endif -%}
         {% endfor -%}
