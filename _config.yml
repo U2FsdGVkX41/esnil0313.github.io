@@ -32,8 +32,12 @@ plugins:
 
 # A list of the pages to display in the navigation bar
 header_pages: 
-  - Street 
-  - Event
+  - name: All
+    link: /
+  - name: Daily
+    link: /daily.html
+  - name: Event
+    link: /event.html
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
