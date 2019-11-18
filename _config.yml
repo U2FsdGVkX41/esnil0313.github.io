@@ -32,13 +32,13 @@ plugins:
 
 # A list of the pages to display in the navigation bar
 header_pages: 
-  - name: All
+  - name: all
     link: /
-  - name: Daily
+  - name: daily
     link: /daily.html
-  - name: Event
+  - name: event
     link: /event.html
-  - name: Blog
+  - name: blog
     link: /blog.html    
 
 # Exclude from processing.
