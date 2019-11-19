@@ -128,8 +128,6 @@ void function(window, document, undefined) {
           cell.innerHTML = `
             <p><a href="#"><img src="image/${images[j].src}.jpg" height="${images[j].height}" width="${images[j].width}" /></a></p>
             <h2><a href="#">${images[j].title}</a></h2>
-            <span class="like">Like!</span>
-            <span class="mark">Mark!</span>
           `
           fragment.appendChild(cell);
         }
@@ -160,8 +158,6 @@ void function(window, document, undefined) {
       cell.innerHTML = `
         <p><a href="#"><img src="image/${key}.jpg" height="${images[key]}" width="190" /></a></p>
         <h2><a href="#">demo picture ${key}</a></h2>
-        <span class="like">Like!</span>
-        <span class="mark">Mark!</span>
       `
       fragment.appendChild(cell);
     }
