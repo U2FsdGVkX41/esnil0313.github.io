@@ -126,7 +126,7 @@ void function(window, document, undefined) {
           cell.tagLine = images[j].title;
           cells.push(cell);
           cell.innerHTML = `
-            <p><a href="#"><img src="img/${images[j].src}.jpg" height="${images[j].height}" width="${images[j].width}" /></a></p>
+            <p><a href="#"><img src="image/${images[j].src}.jpg" height="${images[j].height}" width="${images[j].width}" /></a></p>
             <h2><a href="#">${images[j].title}</a></h2>
             <span class="like">Like!</span>
             <span class="mark">Mark!</span>
@@ -152,13 +152,13 @@ void function(window, document, undefined) {
     var cells = [];
     var images = [0, 286, 143, 270, 143, 190, 285, 152, 275, 285, 285, 128, 281, 242, 339, 236, 157, 286, 259, 267, 137, 253, 127, 190, 190, 225, 269, 264, 272, 126, 265, 287, 269, 125, 285, 190, 314, 141, 119, 274, 274, 285, 126, 279, 143, 266, 279, 600, 276, 285, 182, 143, 287, 126, 190, 285, 143, 241, 166, 240, 190];
     for(var j = 0; j < num; j++) {
-      var key = Math.floor(Math.random() * 60) + 1;
+      var key = Math.floor(Math.random() * 2) + 1;
       var cell = document.createElement('div');
       cell.className = 'cell pending';
       cell.tagLine = 'demo picture ' + key;
       cells.push(cell);
       cell.innerHTML = `
-        <p><a href="#"><img src="img/${key}.jpg" height="${images[key]}" width="190" /></a></p>
+        <p><a href="#"><img src="image/${key}.jpg" height="${images[key]}" width="190" /></a></p>
         <h2><a href="#">demo picture ${key}</a></h2>
         <span class="like">Like!</span>
         <span class="mark">Mark!</span>
