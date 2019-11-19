@@ -3,6 +3,11 @@ layout: default
 published: true
 title: All
 ---
-<center class="half">
-    <img src="/image/DSC3963.jpg" width="10%"/> <img src="/image/P1000110.jpg" width="30%"/>
-</center>
+  <body>
+    <h1>Waterfall Layout</h1>
+    <div id="notice" class="off"></div>
+    <div id="cells"></div>
+    <div id="loader"><span>loading</span></div>
+    <script>var isGithubDemo = true;</script>
+    <script src="script.js"></script>
+  </body>
