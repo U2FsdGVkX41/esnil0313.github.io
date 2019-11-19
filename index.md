@@ -3,4 +3,4 @@ layout: default
 published: true
 title: All
 ---
-This is all page.
+![](/P1000110.jpg)
