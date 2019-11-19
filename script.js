@@ -157,7 +157,6 @@ void function(window, document, undefined) {
       cells.push(cell);
       cell.innerHTML = `
         <p><a href="#"><img src="image/${key}.jpg" height="${images[key]}" width="190" /></a></p>
-        <h2><a href="#">demo picture ${key}</a></h2>
       `
       fragment.appendChild(cell);
     }
