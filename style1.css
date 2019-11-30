@@ -5,12 +5,20 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: relative;
 }
 #horizontal-waterfull {
   width: calc(100% + 17px);
   height: calc(100% + 17px);
+  position: absolute; 
+  left: 0;
   overflow: auto;
 }
+
+#horizontal-waterfull::-webkit-scrollbar {
+    display: none;
+}
+
 #horizontal-waterfull:before, #horizontal-waterfull:after {
   content: '';
   display: table;
