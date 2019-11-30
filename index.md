@@ -31,7 +31,7 @@ img {
 
 <div id="horizontal-waterfull"></div>
 
-<script src="./imagesLayout.js"></script>
+<script src="./imageLayout.js"></script>
 <script>
 const images = [{
   src: 'https://static.cxstore.top/images/lake.jpg',
