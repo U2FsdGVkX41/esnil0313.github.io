@@ -15,10 +15,6 @@
   overflow: auto;
 }
 
-#horizontal-waterfull-box::-webkit-scrollbar {
-    display: none;
-}
-
 #horizontal-waterfull::-webkit-scrollbar {
     display: none;
 }
