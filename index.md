@@ -57,7 +57,7 @@ layout.completedImages.forEach(item => {
   $imageBox.appendChild($image)
   $box.appendChild($imageBox)
 })
-
+document.body.parentNode.style.overflowY = "hidden";
 var resizeTimer = null;
 $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
@@ -75,8 +75,6 @@ $(window).bind('resize', function () {
           $imageBox.appendChild($image)
           $box.appendChild($imageBox)
         });
-        console.log("窗口改变了");
-        console.log($box.clientWidth);
     }, 300);
 });  
 </script>
