@@ -9,9 +9,9 @@ title: All
 <script src="./imageLayout.js"></script>
 <script>
 const images = [{
-  src: 'https://static.cxstore.top/images/lake.jpg',
-  width: 4000,
-  height: 6000
+  src: './image/1.jpg',
+  width: 667,
+  height: 1000
 }, {
   src: 'https://static.cxstore.top/images/japan.jpg',
   width: 1500,
