@@ -22,25 +22,25 @@ const images = [
   height: 540
 }, 
 {
-  src: './image/3.jpg',
-  width: 1000,
-  height: 656
-}, 
+  src: './image/6.jpg',
+  width: 1462,
+  height: 540
+},  
 {
   src: './image/4.jpg',
   width: 667,
   height: 1000
 },
 {
+  src: './image/3.jpg',
+  width: 1000,
+  height: 656
+},   
+{
   src: './image/5.jpg',
   width: 1463,
   height: 540
 },  
-{
-  src: './image/6.jpg',
-  width: 1462,
-  height: 540
-},
 {
   src: './image/2019-11-04-013038.jpg',
   width: 480,
