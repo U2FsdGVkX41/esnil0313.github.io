@@ -15,10 +15,6 @@
   overflow: auto;
 }
 
-#horizontal-waterfull::-webkit-scrollbar {
-    display: none;
-}
-
 #horizontal-waterfull:before, #horizontal-waterfull:after {
   content: '';
   display: table;
