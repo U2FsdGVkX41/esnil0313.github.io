@@ -30,6 +30,6 @@ img {
 
 .image-box {
   float: left;
-  padding: 1px;
+  padding: 0px;
   overflow: hidden;
 }
