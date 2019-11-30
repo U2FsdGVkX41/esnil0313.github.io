@@ -154,7 +154,7 @@ void function(window, document, undefined) {
       var cell = document.createElement('div');
       cell.className = 'cell pending';
       cell.tagLine = 'demo picture ' + key;
-      cell.width = ${images[key]};
+      //cell.style.width = ${images[key]};
       cells.push(cell);  
       cell.innerHTML = `
         <p><a href="#"><img src="image/${key}.jpg" width="${images[key]}" height="300" /></a></p>
