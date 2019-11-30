@@ -156,7 +156,7 @@ void function(window, document, undefined) {
       cell.tagLine = 'demo picture ' + key;
       cells.push(cell);
       cell.innerHTML = `
-        <p><a href="#"><img src="image/${key}.jpg" height="${images[key]}" width="400" /></a></p>
+        <p><a href="#"><img src="image/${key}.jpg" width="${images[key]}" height="300" /></a></p>
       `
       fragment.appendChild(cell);
     }
