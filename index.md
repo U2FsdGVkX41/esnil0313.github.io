@@ -62,7 +62,18 @@ var resizeTimer = null;
 $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
-        console.log("窗口改变了");
+        const $box = document.getElementById('horizontal-waterfull');
+        const layout = new ImagesLayout(images, $box.clientWidth, 3);
+        layout.completedImages.forEach(item => {
+          let $imageBox = document.createElement('div')
+          $imageBox.setAttribute('class', 'image-box')
+          $imageBox.style.width = item.width + 'px'
+          $imageBox.style.height = item.height + 'px'
+          let $image = document.createElement('img')
+          $image.setAttribute('src', item.src)
+          $imageBox.appendChild($image)
+          $box.appendChild($imageBox)
+        });
     }, 300);
 });  
 </script>
