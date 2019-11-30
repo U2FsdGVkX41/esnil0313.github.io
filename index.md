@@ -10,11 +10,28 @@ title: All
 
 <script src="./imageLayout.js"></script>
 <script>
-const images = [{
+const images = [
+{
   src: './image/1.jpg',
   width: 667,
   height: 1000
-}, {
+}, 
+{
+  src: './image/2.jpg',
+  width: 1462,
+  height: 540
+}, 
+{
+  src: './image/3.jpg',
+  width: 1000,
+  height: 656
+}, 
+{
+  src: './image/4.jpg',
+  width: 667,
+  height: 1000
+},   
+{  
   src: 'https://static.cxstore.top/images/japan.jpg',
   width: 1500,
   height: 1125
