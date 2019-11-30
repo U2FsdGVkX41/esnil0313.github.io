@@ -4,7 +4,9 @@ published: true
 title: All
 ---
 <body>
+<div id="horizontal-waterfull-box">  
 <div id="horizontal-waterfull"></div>
+</div>  
 
 <script src="./imageLayout.js"></script>
 <script>
