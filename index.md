@@ -63,6 +63,7 @@ $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
         const $box = document.getElementById('horizontal-waterfull');
+        document.getElementById('horizontal-waterfull').innerHTML = "";
         const layout = new ImagesLayout(images, $box.clientWidth, 3);
         layout.completedImages.forEach(item => {
           let $imageBox = document.createElement('div')
