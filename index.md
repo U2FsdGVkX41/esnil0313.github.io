@@ -30,39 +30,36 @@ const images = [
   src: './image/4.jpg',
   width: 667,
   height: 1000
-},   
-{  
-  src: 'https://static.cxstore.top/images/japan.jpg',
-  width: 1500,
-  height: 1125
-}, {
-  src: 'https://static.cxstore.top/images/girl.jpg',
-  width: 5616,
-  height: 3266
-}, {
-  src: 'https://static.cxstore.top/images/flower.jpg',
-  width: 4864,
-  height: 3648
-}, {
-  src: 'https://static.cxstore.top/images/lake.jpg',
-  width: 4000,
-  height: 6000
-}, {
-  src: 'https://static.cxstore.top/images/japan.jpg',
-  width: 1500,
-  height: 1125
-}, {
-  src: 'https://static.cxstore.top/images/grass.jpg',
-  width: 5184,
-  height: 2916
-}, {
-  src: 'https://static.cxstore.top/images/girl.jpg',
-  width: 5616,
-  height: 3266
-}, {
-  src: 'https://static.cxstore.top/images/flower.jpg',
-  width: 4864,
-  height: 3648
+},
+{
+  src: './image/5.jpg',
+  width: 1463,
+  height: 540
+},  
+{
+  src: './image/6.jpg',
+  width: 1462,
+  height: 540
+},
+{
+  src: './image/2019-11-04-013038.jpg',
+  width: 480,
+  height: 270
+},
+{
+  src: './image/2019-11-04-033403.jpg',
+  width: 480,
+  height: 270
+},
+{
+  src: './image/2019-11-04-195519.jpg',
+  width: 480,
+  height: 270
+},
+{
+  src: './image/2019-10-29-014202.jpg',
+  width: 480,
+  height: 270
 }]
 const $box = document.getElementById('horizontal-waterfull')
 const layout = new ImagesLayout(images, $box.clientWidth, 3)
