@@ -113,5 +113,12 @@ layout.completedImages.forEach(item => {
   $box.appendChild($imageBox)
 })
 }
+var resizeTimer = null;
+$(window).bind('resize', function () {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+        console.log("窗口改变了");
+    }, 300);
+});  
 </script>
 </body>
