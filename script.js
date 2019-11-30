@@ -181,7 +181,7 @@ void function(window, document, undefined) {
       if(j==0){
         cells[j].style.left = columnIndex * (COLUMN_WIDTH + GAP_WIDTH) + 'px';
       }else{
-        cells[j].style.left = cells[j-1].style.left + cells[j].width + GAP_WIDTH + 'px';
+        cells[j].style.left = columnIndex * (COLUMN_WIDTH + GAP_WIDTH) + 'px';
       };     
       cells[j].style.top = columnHeight + 'px';
       columnHeights[columnIndex] = columnHeight + GAP_HEIGHT + cells[j].offsetHeight;
