@@ -3,10 +3,12 @@
 }
 #horizontal-waterfull-box {
   width: 100%;
+  height: 100%
   overflow: hidden;
 }
 #horizontal-waterfull {
   width: calc(100% + 17px);
+  height: calc(100% + 17px);
   overflow: auto;
 }
 #horizontal-waterfull:before, #horizontal-waterfull:after {
