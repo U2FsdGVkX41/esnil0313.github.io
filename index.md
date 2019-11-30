@@ -57,11 +57,6 @@ layout.completedImages.forEach(item => {
   $imageBox.appendChild($image)
   $box.appendChild($imageBox)
 })
-addEvent(window, 'resize', delayedResize);
-  var delayedResize = function() {
-    clearTimeout(resizeDelay);
-    resizeDelay = setTimeout(reflowCells, 500);
-  };  
 var reflowCells = function() {
   const images = [{
   src: './image/1.jpg',
@@ -113,6 +108,11 @@ layout.completedImages.forEach(item => {
   $box.appendChild($imageBox)
 })
 }
+var delayedResize = function() {
+    clearTimeout(resizeDelay);
+    resizeDelay = setTimeout(reflowCells, 500);
+};    
+addEvent(window, 'resize', delayedResize);
 var resizeTimer = null;
 $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
