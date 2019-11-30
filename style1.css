@@ -16,9 +16,6 @@
   display: table;
   clear: both;
 }
-body{
-  overflow: hidden;
-}
 img {
   display: block;
   width: 100%;
