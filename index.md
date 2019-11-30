@@ -4,31 +4,6 @@ published: true
 title: All
 ---
 <body>
-
-<style>
-* {
-  box-sizing: border-box;
-}
-#horizontal-waterfull {
-  width: 100%;
-}
-#horizontal-waterfull:before, #horizontal-waterfull:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-.image-box {
-  float: left;
-  padding: 1px;
-  overflow: hidden;
-}
-</style>
-
 <div id="horizontal-waterfull"></div>
 
 <script src="./imageLayout.js"></script>
