@@ -148,9 +148,9 @@ addEvent(window, 'resize', delayedResize);
   };  
 var reflowCells = function() {
   const images = [{
-  src: 'https://static.cxstore.top/images/lake.jpg',
-  width: 4000,
-  height: 6000
+  src: './image/1.jpg',
+  width: 667,
+  height: 1000
 }, {
   src: 'https://static.cxstore.top/images/japan.jpg',
   width: 1500,
