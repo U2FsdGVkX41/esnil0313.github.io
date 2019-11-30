@@ -1,6 +1,10 @@
 * {
   box-sizing: border-box;
 }
+#horizontal-waterfull-box {
+  width: 100%;
+  overflow: hidden;
+}
 #horizontal-waterfull {
   width: calc(100% + 17px);
   overflow: auto;
