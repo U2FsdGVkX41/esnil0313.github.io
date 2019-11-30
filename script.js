@@ -154,7 +154,8 @@ void function(window, document, undefined) {
       var cell = document.createElement('div');
       cell.className = 'cell pending';
       cell.tagLine = 'demo picture ' + key;
-      cells.push(cell);
+      cell.width = ${images[key]};
+      cells.push(cell);  
       cell.innerHTML = `
         <p><a href="#"><img src="image/${key}.jpg" width="${images[key]}" height="300" /></a></p>
       `
@@ -177,7 +178,11 @@ void function(window, document, undefined) {
       columnIndex = getMinKey(columnHeights);
       columnHeight = columnHeights[columnIndex];
       cells[j].style.height = (cells[j].offsetHeight - CELL_PADDING) + 'px';
-      cells[j].style.left = columnIndex * (COLUMN_WIDTH + GAP_WIDTH) + 'px';
+      if(j==0){
+        cells[j].style.left = columnIndex * (COLUMN_WIDTH + GAP_WIDTH) + 'px';
+      }else{
+        cells[j].style.left = cells[j-1].style.left + cells[j].width + GAP_WIDTH + 'px';
+      };     
       cells[j].style.top = columnHeight + 'px';
       columnHeights[columnIndex] = columnHeight + GAP_HEIGHT + cells[j].offsetHeight;
       if(!reflow) {
