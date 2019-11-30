@@ -10,7 +10,7 @@ title: All
   box-sizing: border-box;
 }
 #horizontal-waterfull {
-  width: 300px;
+  width: 100%;
 }
 #horizontal-waterfull:before, #horizontal-waterfull:after {
   content: '';
