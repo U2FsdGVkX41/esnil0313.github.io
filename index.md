@@ -66,6 +66,8 @@ const images = [
 }]
 const $box = document.getElementById('horizontal-waterfull')
 const layout = new ImagesLayout(images, $box.clientWidth, 3)
+var box = document.getElementById('horizontal-waterfull-box') 
+box.style.height = 500
 layout.completedImages.forEach(item => {
   let $imageBox = document.createElement('div')
   $imageBox.setAttribute('class', 'image-box')
