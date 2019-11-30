@@ -74,6 +74,8 @@ $(window).bind('resize', function () {
           $imageBox.appendChild($image)
           $box.appendChild($imageBox)
         });
+        console.log("窗口改变了");
+        console.log($box.clientWidth);
     }, 300);
 });  
 </script>
