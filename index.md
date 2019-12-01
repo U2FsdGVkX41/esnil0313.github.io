@@ -3,10 +3,8 @@ layout: default
 published: true
 title: All
 ---
-<body>
-<div id="horizontal-waterfull-box">  
+<body>  
 <div id="horizontal-waterfull"></div>
-</div>  
 
 <script src="./imageLayout.js"></script>
 <script>
