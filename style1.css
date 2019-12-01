@@ -30,6 +30,9 @@ img {
 
 .image-box {
   float: left;
-  padding: 1px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 1px;
+  padding-right: 1px;
   overflow: hidden;
 }
