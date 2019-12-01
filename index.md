@@ -68,9 +68,12 @@ layout.completedImages.forEach(item => {
   $imageBox.setAttribute('class', 'image-box')
   $imageBox.style.width = item.width + 'px'
   $imageBox.style.height = item.height + 'px'
+  let $imagecell = document.createElement('a')
+  $imagecell.setAttribute('href', item.src)
   let $image = document.createElement('img')
   $image.setAttribute('src', item.src)
-  $imageBox.appendChild($image)
+  $imagecell.appendChild($image)
+  $imageBox.appendChild($imagecell)
   $box.appendChild($imageBox)
 })
 var resizeTimer = null;
