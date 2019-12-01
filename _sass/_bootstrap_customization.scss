@@ -12,6 +12,8 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
 .navbar {
   font-size: $font-size-sm;
   font-weight: 600;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
 
   &-nav {
     .nav-link {
