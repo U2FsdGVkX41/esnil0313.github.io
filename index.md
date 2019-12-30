@@ -1,7 +1,7 @@
 ---
 layout: default
 published: true
-title: All
+title: Chasing the faux.
 ---
 <body>  
 <div id="horizontal-waterfull"></div>
