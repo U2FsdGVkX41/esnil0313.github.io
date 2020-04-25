@@ -3,7 +3,7 @@ layout: default
 published: true
 title: Chasing the faux.
 ---
-{% include footer.html %} 
+{% include audio.html %} 
 <body>  
 <div id="horizontal-waterfull"></div>
 
