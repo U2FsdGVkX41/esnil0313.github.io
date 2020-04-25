@@ -3,6 +3,7 @@ layout: default
 published: true
 title: Chasing the faux.
 ---
+{% include footer.html %} 
 <body>  
 <div id="horizontal-waterfull"></div>
 
@@ -98,7 +99,3 @@ $(window).bind('resize', function () {
 });  
 </script>
 </body>
-<audio autoplay="autoplay" controls="controls"loop="loop" preload="auto"
-            src="loop.mp3">
-      unsupported audio.
-</audio>
