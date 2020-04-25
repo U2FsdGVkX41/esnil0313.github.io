@@ -98,5 +98,4 @@ $(window).bind('resize', function () {
     }, 300);
 });  
 </script>
-(((loop.mp3)))
 </body>
