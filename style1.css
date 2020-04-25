@@ -36,3 +36,5 @@ img {
   padding-right: 1px;
   overflow: hidden;
 }
+
+.image-box:hover {opacity: 0.7;}
