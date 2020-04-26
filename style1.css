@@ -105,3 +105,8 @@ img {
         width: 100%;
     }
 }
+
+@font-face {
+    font-family: HanYiShuSongSim1;
+    src: url("HanYiShuSong1.ttf")
+}
