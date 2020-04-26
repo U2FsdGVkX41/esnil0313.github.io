@@ -4,8 +4,6 @@ published: true
 title: Blog
 order: 3
 ---
-This is the blog page.
-
 <body>
   <ul>
     {% for post in site.posts %}
