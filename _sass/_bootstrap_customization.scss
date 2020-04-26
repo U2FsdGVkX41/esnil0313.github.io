@@ -8,10 +8,15 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
 @import url($web-font-path);
 
 @font-face{
+            font-family:Louvre;
+            src:url('../lourve.otf');
+        }
+
+@font-face{
             font-family:HanYiShuSong1;
             src:url('../HanYiShuSong1.ttf');
         }
-body ,h1 ,h2, h3, h4, h5, h6 { font-family:HanYiShuSong1, Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif;}
+body ,h1 ,h2, h3, h4, h5, h6 { font-family:Louvre HanYiShuSong1, Nunito Sans, Tahoma, Helvetica, Arial, sans-serif;}
 
 // Navbar ======================================================================
 
