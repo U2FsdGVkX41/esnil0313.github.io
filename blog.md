@@ -10,7 +10,7 @@ This is the blog page.
   <ul>
     {% for post in site.posts %}
       <li>
-        <a href="{{ post.url }}">{{ post.title }}</a>
+        <a class="post-title" href="{{ post.url }}">{{ post.title }}</a>
         <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
