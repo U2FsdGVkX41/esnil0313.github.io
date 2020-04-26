@@ -5,7 +5,6 @@ title: Chasing the faux.
 ---
 {% include open-embed.html %}
 
-<body>  
 <div id="horizontal-waterfull"></div>
   
 <div id="myModal" class="modal">
@@ -124,4 +123,3 @@ $(window).bind('resize', function () {
     }, 300);
 });  
 </script>
-</body>
