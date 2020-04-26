@@ -17,7 +17,9 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
             src:url('../FangZhengShuSong.ttf');
         }
 body ,h1 ,h2, h3, h4, h5, h6 { font-family:Louvre, FangZhengShuSong, HGS明朝E, 游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN","Hiragino Mincho Pro", Tahoma, Helvetica, Arial, sans-serif;}
-.jp_text{ font-family:Louvre, "Hiragino Mincho ProN","Hiragino Mincho Pro", 游明朝,"Yu Mincho",YuMincho, HGP明朝E, Tahoma, Helvetica, Arial, sans-serif;}
+.jp_text{ font-family:"Louvre, Hiragino Mincho ProN","Hiragino Mincho Pro", 游明朝,"Yu Mincho",YuMincho, HGS明朝E, Tahoma, Helvetica, Arial, sans-serif;
+          font-weight: 350;
+}
 // Navbar ======================================================================
 
 .navbar {
