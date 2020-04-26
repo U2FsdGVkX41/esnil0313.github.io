@@ -13,10 +13,10 @@ $web-font-path: "https://fonts.googleapis.com/css?family=Nunito+Sans:400,600" !d
         }
 
 @font-face{
-            font-family:HanYiShuSong1;
-            src:url('../HanYiShuSong1.ttf');
+            font-family:FangZhengShuSong;
+            src:url('../FangZhengShuSong.ttf');
         }
-body ,h1 ,h2, h3, h4, h5, h6 { font-family:Louvre, HanYiShuSong1, Nunito Sans, Tahoma, Helvetica, Arial, sans-serif;}
+body ,h1 ,h2, h3, h4, h5, h6 { font-family:Louvre, FangZhengShuSong, Nunito Sans, Tahoma, Helvetica, Arial, sans-serif;}
 
 // Navbar ======================================================================
 
