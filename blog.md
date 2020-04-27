@@ -9,7 +9,6 @@ order: 3
     {% for post in site.posts %}
       <li>
         <a class="post-title" href="{{ post.url }}">{{post.stamp}} | {{ post.title }}</a>
-        <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
   </ul>
