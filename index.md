@@ -118,7 +118,6 @@ $(window).bind('resize', function () {
           $imgmodal.appendChild($modaltext)
           let $imagecell = document.createElement('a')
           //$imagecell.setAttribute('href', item.src)
-          <div class=""> My favorite music is {{ member.music}}</div>
           let $image = document.createElement('img')
           $image.setAttribute('src', item.src)
           $imagecell.appendChild($image)
