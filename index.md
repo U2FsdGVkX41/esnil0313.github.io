@@ -92,12 +92,17 @@ layout.completedImages.forEach(item => {
   $imageBox.setAttribute('class', 'image-box')
   $imageBox.style.width = item.width + 'px'
   $imageBox.style.height = item.height + 'px'
+  let $imgmodal = document.createElement('div')
+  $imgmodal.setAttribute('class', 'modal hide')
+  let $modaltext=document.createTextNode("test");
+  $imgmodal.appendChild($modaltext)  
   let $imagecell = document.createElement('a')
-  $imagecell.setAttribute('href', item.src)
+  //$imagecell.setAttribute('href', item.src)
   let $image = document.createElement('img')
   $image.setAttribute('src', item.src)
   $imagecell.appendChild($image)
   $imageBox.appendChild($imagecell)
+  $imageBox.appendChild($imgmodal)
   $box.appendChild($imageBox)
 })
 var resizeTimer = null;
@@ -122,7 +127,7 @@ $(window).bind('resize', function () {
           $image.setAttribute('src', item.src)
           $imagecell.appendChild($image)
           $imageBox.appendChild($imagecell)
-          imageBox.appendChild($imgmodal)
+          $imageBox.appendChild($imgmodal)
           $box.appendChild($imageBox)
         });
     }, 300);
