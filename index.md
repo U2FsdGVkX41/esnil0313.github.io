@@ -113,7 +113,7 @@ $(window).bind('resize', function () {
           $imageBox.style.width = item.width + 'px'
           $imageBox.style.height = item.height + 'px'
           let $imagecell = document.createElement('a')
-          $imagecell.setAttribute('href', item.src)
+          //$imagecell.setAttribute('href', item.src)
           let $image = document.createElement('img')
           $image.setAttribute('src', item.src)
           $imagecell.appendChild($image)
