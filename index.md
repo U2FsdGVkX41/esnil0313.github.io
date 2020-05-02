@@ -91,11 +91,11 @@ const layout = new ImagesLayout(images, $box.clientWidth, 2)
 layout.completedImages.forEach(item => {
   let $imageBox = document.createElement('div')
   $imageBox.setAttribute('class', 'image-box')
-  $imageBox.setAttribute('onclick', 'openModal(this)')
   $imageBox.style.width = item.width + 'px'
   $imageBox.style.height = item.height + 'px'
   let $imagecell = document.createElement('a')
   let $image = document.createElement('img')
+  $image.setAttribute('onclick', 'openModal(this)')
   $image.setAttribute('src', item.src)
   $imagecell.appendChild($image)
   $imageBox.appendChild($imagecell)
