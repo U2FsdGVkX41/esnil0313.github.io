@@ -15,9 +15,9 @@ title: Chasing the faux.
 
 <script>
 
-function openModal(obj) {/*打开模态框*/
+function openModal(obj) {
     document.getElementById('myModal').style.display = 'block';
-    val imagebox = obj.innerHTML;
+    //val imagebox = obj.innerHTML;
     //val imagecell = imagebox.getElementByTag("a")[0];
     //val img = imagecell.getElementByTag("img")[0];
     var modal = document.getElementById('myModal');
@@ -110,7 +110,7 @@ $(window).bind('resize', function () {
         layout.completedImages.forEach(item => {
           let $imageBox = document.createElement('div')
           $imageBox.setAttribute('class', 'image-box')
-          $imageBox.setAttribute('onclick', 'openModal()')
+          $imageBox.setAttribute('onclick', 'openModal(this)')
           $imageBox.style.width = item.width + 'px'
           $imageBox.style.height = item.height + 'px'
           let $imgmodal = document.createElement('div')
