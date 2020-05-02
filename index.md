@@ -9,7 +9,7 @@ title: Chasing the faux.
   
 <div id="myModal" class="modal">
   <span class="close">×</span>
-  <img class="modal-content" id="modal-image">
+  <img class="modal-content" id="modal-image" />
   <div id="caption"></div>
 </div>
 
@@ -18,14 +18,14 @@ title: Chasing the faux.
 function openModal(obj) {/*打开模态框*/
     document.getElementById('myModal').style.display = "block";
     val imagebox = obj.innerHTML;
-    val imagecell = imagebox.getElementByTag("a")[0];
-    val img = imagecell.getElementByTag("img")[0];
+    //val imagecell = imagebox.getElementByTag("a")[0];
+    //val img = imagecell.getElementByTag("img")[0];
     var modal = document.getElementById('myModal');
     var modalImg = document.getElementById("modal-image");
-    var captionText = document.getElementById("caption");
-    modalImg.src = img.src;
-    modalImg.alt =　"国立新美術館｜東京";
-    captionText.innerHTML = "国立新美術館｜東京";
+    //var captionText = document.getElementById("caption");
+    modalImg.src = "./image/1.jpg";
+    //modalImg.alt =　"国立新美術館｜東京";
+    //captionText.innerHTML = "国立新美術館｜東京";
     modal.onclick = function(){
     modal.style.display = "none";
     }
