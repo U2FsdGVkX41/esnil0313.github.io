@@ -16,7 +16,7 @@ title: Chasing the faux.
 <script>
 
 function openModal(obj) {/*打开模态框*/
-    document.getElementById('myModal').style.display = "block";
+    document.getElementById('myModal').style.display = 'block';
     val imagebox = obj.innerHTML;
     //val imagecell = imagebox.getElementByTag("a")[0];
     //val img = imagecell.getElementByTag("img")[0];
