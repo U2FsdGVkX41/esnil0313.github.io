@@ -25,8 +25,8 @@ function openModal(obj) {
     var modalImg = document.getElementById("modal-image");
     //var captionText = document.getElementById("caption");
     modalImg.src = imgsrc;
-    //modalImg.alt =　"国立新美術館｜東京";
-    //captionText.innerHTML = "国立新美術館｜東京";
+    modalImg.alt =　"国立新美術館｜東京";
+    captionText.innerHTML = "国立新美術館｜東京";
     modal.onclick = function(){
     modal.style.display = "none";
     }
