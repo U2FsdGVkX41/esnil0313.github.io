@@ -14,6 +14,11 @@ title: Chasing the faux.
 </div>
 
 <script>
+
+function openModal() {/*打开模态框*/
+    document.getElementById('myModal').style.display = "block";
+}
+
 var modal = document.getElementById('myModal');
 var img = document.getElementById('myImg');
 var modalImg = document.getElementById("img01");
