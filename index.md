@@ -9,31 +9,33 @@ title: Chasing the faux.
   
 <div id="myModal" class="modal">
   <span class="close">×</span>
-  <img class="modal-content" id="img01">
-  <div id="caption">test</div>
+  <img class="modal-content" id="modal-image">
+  <div id="caption"></div>
 </div>
 
 <script>
 
-function openModal() {/*打开模态框*/
+function openModal(obj) {/*打开模态框*/
     document.getElementById('myModal').style.display = "block";
-}
-
-var modal = document.getElementById('myModal');
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-modal.onclick = function(){
+    val imagebox = obj.innerHTML;
+    val imagecell = imagebox.getElementByTag("a")[0];
+    val img = imagecell.getElementByTag("img")[0];
+    var modal = document.getElementById('myModal');
+    var img = document.getElementById('myImg');
+    var modalImg = document.getElementById("modal-image");
+    var captionText = document.getElementById("caption");
+    modalImg.src = img.src;
+    modalImg.alt =　"国立新美術館｜東京";
+    captionText.innerHTML = "国立新美術館｜東京";
+    modal.onclick = function(){
     modal.style.display = "none";
-    modalImg.src = this.src;
-    modalImg.alt = this.alt;
-    captionText.innerHTML = this.alt;
 }
 
 var span = document.getElementsByClassName("close")[0];
 
 span.onclick = function() { 
     modal.style.display = "none";
+}
 }
 </script>
 
@@ -95,20 +97,14 @@ const layout = new ImagesLayout(images, $box.clientWidth, 2)
 layout.completedImages.forEach(item => {
   let $imageBox = document.createElement('div')
   $imageBox.setAttribute('class', 'image-box')
-  $imageBox.setAttribute('onclick', 'openModal()')
+  $imageBox.setAttribute('onclick', 'openModal(this)')
   $imageBox.style.width = item.width + 'px'
   $imageBox.style.height = item.height + 'px'
-  let $imgmodal = document.createElement('div')
-  $imgmodal.setAttribute('class', 'modal hide')
-  let $modaltext=document.createTextNode("test");
-  $imgmodal.appendChild($modaltext)  
   let $imagecell = document.createElement('a')
-  //$imagecell.setAttribute('href', item.src)
   let $image = document.createElement('img')
   $image.setAttribute('src', item.src)
   $imagecell.appendChild($image)
   $imageBox.appendChild($imagecell)
-  $imageBox.appendChild($imgmodal)
   $box.appendChild($imageBox)
 })
 var resizeTimer = null;
