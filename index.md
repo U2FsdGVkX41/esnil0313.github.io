@@ -9,7 +9,7 @@ title: Chasing the faux.
   
 <div id="myModal" class="modal">
   <!--<span class="close">×</span>-->
-  <img class="modal-content img-responsive center-block" id="modal-image" />
+  <img class="modal-content img-responsive center-block" id="modal-image" style="height:auto; max-height:100%"/>
   <div id="caption"></div>
 </div>
 
