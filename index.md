@@ -17,7 +17,7 @@ title: Chasing the faux.
 
 function openModal(obj) {
     document.getElementById('myModal').style.display = 'block';
-    alert(obj);
+    alert(obj.getAttribute('src');
     //val imagebox = obj.innerHTML;
     //val imagecell = imagebox.getElementByTag("a")[0];
     //val img = imagecell.getElementByTag("img")[0];
