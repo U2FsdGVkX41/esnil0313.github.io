@@ -10,7 +10,7 @@ title: Chasing the faux.
 <div id="myModal" class="modal">
   <span class="close">×</span>
   <img class="modal-content" id="img01">
-  <div id="caption"></div>
+  <div id="caption">test</div>
 </div>
 
 <script>
@@ -23,8 +23,8 @@ var modal = document.getElementById('myModal');
 var img = document.getElementById('myImg');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-img.onclick = function(){
-    modal.style.display = "block";
+modal.onclick = function(){
+    modal.style.display = "none";
     modalImg.src = this.src;
     modalImg.alt = this.alt;
     captionText.innerHTML = this.alt;
@@ -139,10 +139,4 @@ $(window).bind('resize', function () {
         });
     }, 300);
 }); 
-$(document).ready(function () {
-      $("div.image-box").on("click", function () {
-          console.log("clicked");
-          $(this).next().removeClass("hide");
-      });
-});
 </script>
