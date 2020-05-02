@@ -8,7 +8,7 @@ title: Chasing the faux.
 <div id="horizontal-waterfull"></div>
   
 <div id="myModal" class="modal">
-  <span class="close">×</span>
+  <!--<span class="close">×</span>-->
   <img class="modal-content" id="modal-image" />
   <div id="caption"></div>
 </div>
