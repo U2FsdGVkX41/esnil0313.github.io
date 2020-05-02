@@ -95,6 +95,7 @@ const layout = new ImagesLayout(images, $box.clientWidth, 2)
 layout.completedImages.forEach(item => {
   let $imageBox = document.createElement('div')
   $imageBox.setAttribute('class', 'image-box')
+  $imageBox.setAttribute('onclick', 'openModal()')
   $imageBox.style.width = item.width + 'px'
   $imageBox.style.height = item.height + 'px'
   let $imgmodal = document.createElement('div')
