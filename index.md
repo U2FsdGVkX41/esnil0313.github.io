@@ -17,7 +17,7 @@ title: Chasing the faux.
 
 function openModal(obj) {
     document.getElementById('myModal').style.display = 'block';
-    alert(obj.getElementsByTag("img")[0]);
+    alert(obj.innerHTML);
     //val imagebox = obj.innerHTML;
     //val imagecell = imagebox.getElementByTag("a")[0];
     //val img = imagecell.getElementByTag("img")[0];
@@ -111,7 +111,6 @@ $(window).bind('resize', function () {
         layout.completedImages.forEach(item => {
           let $imageBox = document.createElement('div')
           $imageBox.setAttribute('class', 'image-box')
-          $imageBox.setAttribute('onclick', 'openModal(this)')
           $imageBox.style.width = item.width + 'px'
           $imageBox.style.height = item.height + 'px'
           let $imgmodal = document.createElement('div')
@@ -121,6 +120,7 @@ $(window).bind('resize', function () {
           let $imagecell = document.createElement('a')
           //$imagecell.setAttribute('href', item.src)
           let $image = document.createElement('img')
+          $image.setAttribute('onclick', 'openModal(this)')
           $image.setAttribute('src', item.src)
           $imagecell.appendChild($image)
           $imageBox.appendChild($imagecell)
