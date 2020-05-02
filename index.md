@@ -23,7 +23,7 @@ function openModal(obj) {
     //val img = imagecell.getElementByTag("img")[0];
     var modal = document.getElementById('myModal');
     var modalImg = document.getElementById("modal-image");
-    //var captionText = document.getElementById("caption");
+    var captionText = document.getElementById("caption");
     modalImg.src = imgsrc;
     modalImg.alt =　"国立新美術館｜東京";
     captionText.innerHTML = "国立新美術館｜東京";
