@@ -95,6 +95,12 @@ layout.completedImages.forEach(item => {
   let $image = document.createElement('img')
   $image.setAttribute('onclick', 'openModal(this)')
   $image.setAttribute('src', item.src)
+  $image.style.animation-fill-mode: 'forwards'
+  $image.style.opacity: '0.0'
+  $image.onload = function () {
+       this.style.animation-name = 'fadein'
+       this.style.animation-duration = '0.6s'
+  }
   $imagecell.appendChild($image)
   $imageBox.appendChild($imagecell)
   $box.appendChild($imageBox)
@@ -115,6 +121,12 @@ $(window).bind('resize', function () {
           let $image = document.createElement('img')
           $image.setAttribute('onclick', 'openModal(this)')
           $image.setAttribute('src', item.src)
+          $image.style.animation-fill-mode: 'forwards'
+          $image.style.opacity: '0.0'
+          $image.onload = function () {
+              this.style.animation-name = 'fadein'
+              this.style.animation-duration = '0.6s'
+          }
           $imagecell.appendChild($image)
           $imageBox.appendChild($imagecell)
           $box.appendChild($imageBox)
