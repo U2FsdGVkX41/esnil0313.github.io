@@ -18,13 +18,13 @@ title: Chasing the faux.
 function openModal(obj) {
     document.getElementById('myModal').style.display = 'block';
     var imgsrc = obj.getAttribute('src');
-    var imgalt = obj.getAttribute('alt');
+    //var imgalt = obj.getAttribute('alt');
     var modal = document.getElementById('myModal');
     var modalImg = document.getElementById("modal-image");
-    var captionText = document.getElementById("caption");
+    //var captionText = document.getElementById("caption");
     modalImg.src = imgsrc;
-    modalImg.alt =　imgalt;
-    captionText.innerHTML = imgalt;
+    //modalImg.alt =　imgalt;
+    //captionText.innerHTML = imgalt;
     modal.onclick = function(){
     modal.style.display = "none";
     }
