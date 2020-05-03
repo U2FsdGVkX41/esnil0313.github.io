@@ -56,13 +56,13 @@ const images = [
 },
 {
   src: './image/4.jpg',
-  width: 2560,
-  height: 946
+  width: 667,
+  height: 1000
 },  
 {
   src: './image/P1020239.jpg',
-  width: 960,
-  height: 540
+  width: 2560,
+  height: 946
 },
 {
   src: './image/DSC3841_.jpg',
