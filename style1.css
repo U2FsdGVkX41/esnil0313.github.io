@@ -48,17 +48,16 @@ img {
     top: 0;*/
     width: 100%; /* Full width */
     height: 100%; /* Full height */
+    line-height: 100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    top: 50% !important;
-    left: 50%;
 }
 
 /* Modal Content (image) */
 .modal-content {
     margin: auto;
-    display: block;
+    display: inline-block;
     vertical-align: middle;
     max-width: 100%;
     height: auto;
