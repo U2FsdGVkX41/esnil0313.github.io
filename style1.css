@@ -79,7 +79,7 @@ img {
 }
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform: scale(0)} 
+    from {-webkit-transform: scale(0.9)} 
     to {-webkit-transform: scale(1)}
 }
 
