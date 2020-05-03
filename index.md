@@ -55,16 +55,6 @@ const images = [
   height: 656  
 },
 {
-  src: './image/4.jpg',
-  width: 667,
-  height: 1000
-},  
-{
-  src: './image/P1020239.jpg',
-  width: 2560,
-  height: 946
-},
-{
   src: './image/DSC3841_.jpg',
   width: 1620,
   height: 1080
@@ -74,6 +64,16 @@ const images = [
   width: 1463,
   height: 540
 },  
+{
+  src: './image/P1020239.jpg',
+  width: 2560,
+  height: 946
+},
+{
+  src: './image/4.jpg',
+  width: 667,
+  height: 1000
+}, 
 {
   src: './image/2019-11-04-013038.jpg',
   width: 960,
