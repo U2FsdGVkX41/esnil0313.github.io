@@ -105,6 +105,7 @@ layout.completedImages.forEach(item => {
   let $image = document.createElement('img')
   $image.setAttribute('onclick', 'openModal(this)')
   $image.setAttribute('src', item.src)
+  $image.setAttribute('alt', item.alt)
   $imagecell.appendChild($image)
   $imageBox.appendChild($imagecell)
   $box.appendChild($imageBox)
@@ -121,10 +122,6 @@ $(window).bind('resize', function () {
           $imageBox.setAttribute('class', 'image-box')
           $imageBox.style.width = item.width + 'px'
           $imageBox.style.height = item.height + 'px'
-          let $imgmodal = document.createElement('div')
-          $imgmodal.setAttribute('class', 'modal hide')
-          let $modaltext=document.createTextNode("test");
-          $imgmodal.appendChild($modaltext)
           let $imagecell = document.createElement('a')
           let $image = document.createElement('img')
           $image.setAttribute('onclick', 'openModal(this)')
@@ -132,7 +129,6 @@ $(window).bind('resize', function () {
           $image.setAttribute('alt', item.alt)
           $imagecell.appendChild($image)
           $imageBox.appendChild($imagecell)
-          $imageBox.appendChild($imgmodal)
           $box.appendChild($imageBox)
         });
     }, 300);
