@@ -16,7 +16,7 @@ title: Chasing the faux.
 <script>
 
 function openModal(obj) {
-    document.getElementById('myModal').style.display = 'block';
+    document.getElementById('myModal').style.display = 'flex';
     var imgsrc = obj.getAttribute('src');
     //var imgalt = obj.getAttribute('alt');
     var modal = document.getElementById('myModal');
