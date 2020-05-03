@@ -96,8 +96,8 @@ layout.completedImages.forEach(item => {
   $image.setAttribute('onclick', 'openModal(this)')
   $image.setAttribute('src', item.src)
   $image.onload = function () {
-       this.style.animation-name = 'fadein'
-       this.style.animation-duration = '0.6s'
+         this.style.animationName = 'fadein'
+         this.style.animationDuration = '0.6s'
   }
   $imagecell.appendChild($image)
   $imageBox.appendChild($imagecell)
@@ -120,8 +120,8 @@ $(window).bind('resize', function () {
           $image.setAttribute('onclick', 'openModal(this)')
           $image.setAttribute('src', item.src)
           $image.onload = function () {
-              this.style.animation-name = 'fadein'
-              this.style.animation-duration = '0.6s'
+              this.style.animationName = 'fadein'
+              this.style.animationDuration = '0.6s'
           }
           $imagecell.appendChild($image)
           $imageBox.appendChild($imagecell)
