@@ -9,7 +9,7 @@ title: Chasing the faux.
   
 <div id="myModal" class="modal">
   <!--<span class="close">×</span>-->
-  <img class="modal-content img-responsive-height center-block" id="modal-image" style="width: auto;"/>
+  <img class="modal-content img-responsive-height center-block" id="modal-image" style="width: auto; max-width:150%"/>
   <div id="caption"></div>
 </div>
 
@@ -18,15 +18,13 @@ title: Chasing the faux.
 function openModal(obj) {
     document.getElementById('myModal').style.display = 'block';
     var imgsrc = obj.getAttribute('src');
-    //val imagebox = obj.innerHTML;
-    //val imagecell = imagebox.getElementByTag("a")[0];
-    //val img = imagecell.getElementByTag("img")[0];
+    var imgalt = obj.getAttribute('alt');
     var modal = document.getElementById('myModal');
     var modalImg = document.getElementById("modal-image");
     var captionText = document.getElementById("caption");
     modalImg.src = imgsrc;
-    modalImg.alt =　"国立新美術館｜東京";
-    captionText.innerHTML = "国立新美術館｜東京";
+    modalImg.alt =　imgalt;
+    captionText.innerHTML = imgalt;
     modal.onclick = function(){
     modal.style.display = "none";
     }
@@ -38,51 +36,61 @@ function openModal(obj) {
 const images = [
 {
   src: './image/1.jpg',
+  alt: '国立新美術館｜東京',
   width: 667,
   height: 1000
 }, 
 {
   src: './image/2.jpg',
+  alt: '美らSUNビーチ｜豊見城',
   width: 1462,
   height: 540
 }, 
 {
   src: './image/6.jpg',
+  alt: '品川駅｜東京',
   width: 1462,
   height: 540
 },  
 {
   src: './image/3.jpg',
+  alt: '品川シーズンテラス｜東京',
   width: 1000,
   height: 656  
 },
 {
   src: './image/4.jpg',
+  alt: '高輪橋架道橋下区道｜東京',
   width: 667,
   height: 1000
 },   
 {
   src: './image/5.jpg',
+  alt: '首都圏外郭放水路｜春日部',
   width: 1463,
   height: 540
 },  
 {
   src: './image/2019-11-04-013038.jpg',
+  alt: '六本木ヒルズ｜東京',
   width: 480,
   height: 270
 },
 {
   src: './image/2019-11-04-033403.jpg',
+  alt: '六本木ヒルズ｜東京',
   width: 480,
   height: 270
 },
 {
   src: './image/2019-11-04-195519.jpg',
+  alt: '六本木ヒルズ｜東京',
   width: 480,
   height: 270
 },
 {
   src: './image/2019-10-29-014202.jpg',
+  alt: '六本木ヒルズ｜東京',
   width: 480,
   height: 270
 }]
@@ -118,10 +126,10 @@ $(window).bind('resize', function () {
           let $modaltext=document.createTextNode("test");
           $imgmodal.appendChild($modaltext)
           let $imagecell = document.createElement('a')
-          //$imagecell.setAttribute('href', item.src)
           let $image = document.createElement('img')
           $image.setAttribute('onclick', 'openModal(this)')
           $image.setAttribute('src', item.src)
+          $image.setAttribute('alt', item.alt)
           $imagecell.appendChild($image)
           $imageBox.appendChild($imagecell)
           $imageBox.appendChild($imgmodal)
