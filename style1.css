@@ -51,7 +51,7 @@ img {
     line-height: 100%;
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    background-color: rgba(0,0,0,1.0); /* Black w/ opacity */
     justify-items:center;
     align-items:center;
 }
@@ -71,16 +71,16 @@ img {
 
 /* Add Animation */
 .modal-content, #caption {    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
+    -webkit-animation-name: zoom, fadein;
+    -webkit-animation-duration: 0.6s, 0.6s;
+    animation-name: zoom , fadein;
+    animation-duration: 0.6s, 0.6s;
 }
 
 .modal{
-    -webkit-animation-name: fadein;
+    -webkit-animation-name: fadeout;
     -webkit-animation-duration: 0.6s;
-    animation-name: fadein;
+    animation-name: fadeout;
     animation-duration: 0.6s;
 }
 
@@ -102,11 +102,21 @@ img {
 }
 
 @-webkit-keyframes fadein {
+    0% {opacity: 0.0} 
+    100% {opacity: 1.0}
+}
+
+@keyframes fadein {
+    0% {opacity: 0.0} 
+    100% {opacity: 1.0}
+}
+
+@-webkit-keyframes fadeout {
     0% {background-color: rgba(0,0,0,0.0);} 
     100% {background-color: rgba(0,0,0,1.0);}
 }
 
-@keyframes fadein {
+@keyframes fadeout {
     0% {background-color: rgba(0,0,0,0.0);} 
     100% {background-color: rgba(0,0,0,1.0);}
 }
