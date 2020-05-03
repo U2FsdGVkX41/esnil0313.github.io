@@ -71,6 +71,12 @@ img {
     animation-duration: 0.6s;
 }
 
+.img-responsive-height
+{
+  display: block;
+  width: auto;
+  max-height: 100%;
+}
 
 @-webkit-keyframes zoom {
     from {-webkit-transform: scale(0)} 
@@ -109,7 +115,7 @@ img {
 
 @font-face {
     font-family: HanYiShuSongSim1;
-    src: url("HanYiShuSong1.ttf")
+    src: url("HanYiShuSong1.ttf");
 }
 
 .container page-content{
