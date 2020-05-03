@@ -52,6 +52,8 @@ img {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    justify-items:center;
+    align-items:center;
 }
 
 /* Modal Content (image) */
@@ -61,6 +63,8 @@ img {
     vertical-align: middle;
     max-width: 100%;
     height: auto;
+    justify-items:center;
+    align-items:center;
     /*width: 80%;
     max-width: 700px;*/
 }
