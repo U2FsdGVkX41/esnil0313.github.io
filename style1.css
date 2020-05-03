@@ -76,6 +76,7 @@ img {
     -webkit-animation-duration: 0.6s, 0.6s;
     animation-name: zoom , fadein;
     animation-duration: 0.6s, 0.6s;
+    background-color: rgb(0,0,0);
 }
 
 .modal{
