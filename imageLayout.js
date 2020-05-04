@@ -14,9 +14,11 @@
  */
 
 class ImagesLayout {
-  constructor(images, containerWidth, numberInLine = 10, limit = 0, stdRatio = 1.5) {
-    // 图片列表
+  constructor(images, filter, containerWidth, numberInLine = 10, limit = 0, stdRatio = 1.5) {
+    
     this.images = images
+    this.filter = filter
+    this.filteredImages = []
     // 布局完毕的图片列表
     this.completedImages = []
     // 容器宽度
@@ -35,20 +37,27 @@ class ImagesLayout {
 
   // 将图片列表根据单行数量分块并开始计算布局
   chunkAndLayout () {
-    // 当图片只有一张时，完整显示这张图片
-    if (this.images.length === 1) {
-      this.layoutFullImage(this.images[0])
+    if(this.filter != ''){
+      for (let i = 0; i < this.images.length; i++) {
+        if(this.images[i].tag == this.filter)
+          this.filteredImage.push(this.images[i])
+      }
+    }
+      
+    // 当图片只有一张时，完整显示这张图片    
+    if (this.filteredImages.length === 1) {
+      this.layoutFullImage(this.filteredImages[0])
       return
     }
     let temp = []
-    for (let i = 0; i < this.images.length; i++) {
+    for (let i = 0; i < this.filteredImages.length; i++) {
       if (this.limit && i >= this.limit) return
-      temp.push(this.images[i])
+      temp.push(this.filteredImages[i])
 
       // 当单行图片数量达到限制数量时
       // 当已经是最后一张图片时
       // 当已经达到需要布局的最大数量时
-      if (i % this.numberInLine === this.numberInLine - 1 || i === this.images.length - 1 || i === this.limit - 1) {
+      if (i % this.numberInLine === this.numberInLine - 1 || i === this.filteredImages.length - 1 || i === this.limit - 1) {
         this.computedImagesLayout(temp)
         temp = []
       }
