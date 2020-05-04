@@ -94,7 +94,10 @@ const images = [
   height: 540
 }];
 if(index == 0){
-    document.getElementById('page-all').style.color = "#fff";
+    document.getElementById('page-all').style.color   = "rgba(255,255,255,1.0)";
+    document.getElementById('page-daily').style.color = "rgba(255,255,255,0.5)";
+    document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
+    document.getElementById('page-blog').style.color  = "rgba(255,255,255,0.5)";
     const $box = document.getElementById('horizontal-waterfull');
     const layout = new ImagesLayout(images, $box.clientWidth, 2);
     layout.completedImages.forEach(item => {
@@ -143,13 +146,22 @@ if(index == 0){
     }); 
   }
   else if(index==1){
-    document.getElementById('page-daily').style.color = "#fff";
+    document.getElementById('page-all').style.color   = "rgba(255,255,255,0.5)";
+    document.getElementById('page-daily').style.color = "rgba(255,255,255,1.0)";
+    document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
+    document.getElementById('page-blog').style.color  = "rgba(255,255,255,0.5)";
   }
   else if(index==2){
-    document.getElementById('page-event').style.color = "#fff";
+    document.getElementById('page-all').style.color   = "rgba(255,255,255,0.5)";
+    document.getElementById('page-daily').style.color = "rgba(255,255,255,0.5)";
+    document.getElementById('page-event').style.color = "rgba(255,255,255,1.0)";
+    document.getElementById('page-blog').style.color  = "rgba(255,255,255,0.5)";
   }
   else{
-    document.getElementById('page-blog').style.color = "#fff";
+    document.getElementById('page-all').style.color   = "rgba(255,255,255,0.5)";
+    document.getElementById('page-daily').style.color = "rgba(255,255,255,0.5)";
+    document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
+    document.getElementById('page-blog').style.color  = "rgba(255,255,255,1.0)";
   }
 }
 
