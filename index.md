@@ -13,8 +13,8 @@ title: Chasing the faux.
   <!--<div id="caption" style="font-weight: 600"></div>-->
 </div>
 
+<script src="./imageLayout.js"></script>
 <script>
-
 function openModal(obj) {
     document.getElementById('myModal').style.display = 'flex';
     var imgsrc = obj.getAttribute('src');
@@ -29,10 +29,8 @@ function openModal(obj) {
     modal.style.display = "none";
     }
 }
-</script>
-
-<script src="./imageLayout.js"></script>
-<script>
+  
+function printContent(index) {
 const images = [
 {
   src: './image/1.jpg',
@@ -93,34 +91,36 @@ const images = [
   src: './image/2019-10-29-014202.jpg',
   width: 960,
   height: 540
-}]
-const $box = document.getElementById('horizontal-waterfull')
-const layout = new ImagesLayout(images, $box.clientWidth, 2)
-layout.completedImages.forEach(item => {
-  let $imageBox = document.createElement('div')
-  $imageBox.setAttribute('class', 'image-box')
-  $imageBox.style.width = item.width + 'px'
-  $imageBox.style.height = item.height + 'px'
-  let $imagecell = document.createElement('a')
-  let $image = document.createElement('img')
-  $image.setAttribute('onclick', 'openModal(this)')
-  $image.setAttribute('src', item.src)
-  $image.onload = function () {
-         this.style.animationName = 'fadein'
-         this.style.animationDuration = '0.6s'
-  }
-  $imagecell.appendChild($image)
-  $imageBox.appendChild($imagecell)
-  $box.appendChild($imageBox)
-})
-var resizeTimer = null;
-$(window).bind('resize', function () {
+}];
+if(index == 1){
+    const $box = document.getElementById('horizontal-waterfull');
+    const layout = new ImagesLayout(images, $box.clientWidth, 2);
+    layout.completedImages.forEach(item => {
+    let $imageBox = document.createElement('div')
+    $imageBox.setAttribute('class', 'image-box')
+    $imageBox.style.width = item.width + 'px'
+    $imageBox.style.height = item.height + 'px'
+    let $imagecell = document.createElement('a')
+    let $image = document.createElement('img')
+    $image.setAttribute('onclick', 'openModal(this)')
+    $image.setAttribute('src', item.src)
+    $image.onload = function () {
+           this.style.animationName = 'fadein'
+           this.style.animationDuration = '0.6s'
+    }
+    $imagecell.appendChild($image)
+    $imageBox.appendChild($imagecell)
+    $box.appendChild($imageBox)
+    });
+    
+    var resizeTimer = null;
+    $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () {
-        const $box = document.getElementById('horizontal-waterfull');
-        document.getElementById('horizontal-waterfull').innerHTML = "";
-        const layout = new ImagesLayout(images, $box.clientWidth, 2);
-        layout.completedImages.forEach(item => {
+        resizeTimer = setTimeout(function () {
+          const $box = document.getElementById('horizontal-waterfull');
+          document.getElementById('horizontal-waterfull').innerHTML = "";
+          const layout = new ImagesLayout(images, $box.clientWidth, 2);
+          layout.completedImages.forEach(item => {
           let $imageBox = document.createElement('div')
           $imageBox.setAttribute('class', 'image-box')
           $imageBox.style.width = item.width + 'px'
@@ -137,6 +137,8 @@ $(window).bind('resize', function () {
           $imageBox.appendChild($imagecell)
           $box.appendChild($imageBox)
         });
-    }, 300);
-}); 
+      }, 300);
+    }); 
+  }
+}
 </script>
