@@ -37,7 +37,6 @@ class ImagesLayout {
 
   // 将图片列表根据单行数量分块并开始计算布局
   chunkAndLayout () {
-    console.log(this.filter);
     if(this.filter != ''){
       console.log('path1');
       for (let i = 0; i < this.images.length; i++) {
@@ -45,8 +44,7 @@ class ImagesLayout {
           this.filteredImage.push(this.images[i])
       }
     }else{
-      console.log('path2');
-      this.filterImage = this.images
+      this.filterImages = this.images
     }
       
     // 当图片只有一张时，完整显示这张图片    
