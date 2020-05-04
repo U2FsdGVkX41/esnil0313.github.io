@@ -92,7 +92,7 @@ const images = [
   width: 960,
   height: 540
 }];
-if(index == 1){
+if(index == 0){
     const $box = document.getElementById('horizontal-waterfull');
     const layout = new ImagesLayout(images, $box.clientWidth, 2);
     layout.completedImages.forEach(item => {
@@ -142,5 +142,5 @@ if(index == 1){
   }
 }
 
-printContent(1);
+printContent(0);
 </script>
