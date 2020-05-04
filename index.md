@@ -35,61 +35,73 @@ console.log(index);
 const images = [
 {
   src: './image/1.jpg',
+  tag: 'daily',
   width: 667,
   height: 1000
 }, 
 {
   src: './image/2.jpg',
+  tag: 'daily',
   width: 1462,
   height: 540
 }, 
 {
   src: './image/6.jpg',
+  tag: 'daily',
   width: 1462,
   height: 540
 },  
 {
   src: './image/3.jpg',
+  tag: 'daily',
   width: 1000,
   height: 656  
 },
 {
   src: './image/DSC3841_.jpg',
+  tag: 'daily',
   width: 1620,
   height: 1080
 },  
 {
   src: './image/5.jpg',
+  tag: 'daily',
   width: 1463,
   height: 540
 },  
 {
   src: './image/P1020239.jpg',
+  tag: 'daily',
   width: 2560,
   height: 946
 },
 {
   src: './image/4.jpg',
+  tag: 'daily',
   width: 667,
   height: 1000
 }, 
 {
   src: './image/2019-11-04-013038.jpg',
+  tag: 'event',
   width: 960,
   height: 540
 },
 {
   src: './image/2019-11-04-033403.jpg',
+  tag: 'event',
   width: 960,
   height: 540
 },
 {
   src: './image/2019-11-04-195519.jpg',
+  tag: 'event',
   width: 960,
   height: 540
 },
 {
   src: './image/2019-10-29-014202.jpg',
+  tag: 'event',
   width: 960,
   height: 540
 }];
@@ -99,6 +111,7 @@ if(index == 0){
     document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
     document.getElementById('page-blog').style.color  = "rgba(255,255,255,0.5)";
     const $box = document.getElementById('horizontal-waterfull');
+    $box.innerHTML = "";
     const layout = new ImagesLayout(images, $box.clientWidth, 2);
     layout.completedImages.forEach(item => {
     let $imageBox = document.createElement('div')
@@ -150,6 +163,7 @@ if(index == 0){
     document.getElementById('page-daily').style.color = "rgba(255,255,255,1.0)";
     document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
     document.getElementById('page-blog').style.color  = "rgba(255,255,255,0.5)";
+    
   }
   else if(index==2){
     document.getElementById('page-all').style.color   = "rgba(255,255,255,0.5)";
