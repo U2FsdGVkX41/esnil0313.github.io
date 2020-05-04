@@ -31,6 +31,7 @@ function openModal(obj) {
 }
   
 function printContent(index) {
+console.alert(index);
 const images = [
 {
   src: './image/1.jpg',
