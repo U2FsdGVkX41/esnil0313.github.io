@@ -178,6 +178,12 @@ if(index == 0){
     const $box = document.getElementById('horizontal-waterfull');
     $box.innerHTML = "";
     $box.innerHTML = '<object type="text/html" data="blog.html" width="100%" height="100%"></object>';
+    
+    var resizeTimer = null;
+    $(window).bind('resize', function () {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(printLayout(index), 300);
+    });  
   }
 }
 
