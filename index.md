@@ -141,4 +141,6 @@ if(index == 1){
     }); 
   }
 }
+
+printContent(1);
 </script>
