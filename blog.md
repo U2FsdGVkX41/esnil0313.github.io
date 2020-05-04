@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: blogframe
 published: true
 title: Blog
 order: 3
 ---
-<body>
   <ul>
     {% for post in site.posts %}
       <li>
@@ -12,4 +11,3 @@ order: 3
       </li>
     {% endfor %}
   </ul>
-<body>
