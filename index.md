@@ -175,6 +175,9 @@ if(index == 0){
     document.getElementById('page-daily').style.color = "rgba(255,255,255,0.5)";
     document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
     document.getElementById('page-blog').style.color  = "rgba(255,255,255,1.0)";
+    const $box = document.getElementById('horizontal-waterfull');
+    $box.innerHTML = "";
+    $box.load("blog.html");
   }
 }
 
