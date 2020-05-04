@@ -142,6 +142,15 @@ if(index == 0){
       }, 300);
     }); 
   }
+  else if(index==1){
+    document.getElementById('page-daily').style.color = "#fff";
+  }
+  else if(index==2){
+    document.getElementById('page-event').style.color = "#fff";
+  }
+  else{
+    document.getElementById('page-blog').style.color = "#fff";
+  }
 }
 
 printContent(0);
