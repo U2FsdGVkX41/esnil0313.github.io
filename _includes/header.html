@@ -12,7 +12,7 @@
         {% for item in site.header_pages %}
           <!--{%- assign my_page = site.pages | where: "path", path | first -%}-->
           <li class="nav-item">
-            <a class="nav-link" href="{{ item.link | relative_url }}" {% if page.url == item.link %} style="color: white;" {% endif %}>{{ item.name }}</a>
+            <a class="nav-link" onclick=printContent(1)" {% if page.url == item.link %} style="color: white;" {% endif %}>{{ item.name }}</a>
           </li>    
         {% endfor -%}
       </ul>
