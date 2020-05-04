@@ -15,24 +15,7 @@ title: Chasing the faux.
 
 <script src="./imageLayout.js"></script>
 <script>
-function openModal(obj) {
-    document.getElementById('myModal').style.display = 'flex';
-    var imgsrc = obj.getAttribute('src');
-    //var imgalt = obj.getAttribute('alt');
-    var modal = document.getElementById('myModal');
-    var modalImg = document.getElementById("modal-image");
-    //var captionText = document.getElementById("caption");
-    modalImg.src = imgsrc;
-    //modalImg.alt =　imgalt;
-    //captionText.innerHTML = imgalt;
-    modal.onclick = function(){
-    modal.style.display = "none";
-    }
-}
-  
-function printContent(index) {
-console.log(index);
-const images = [
+  const images = [
 {
   src: './image/1.jpg',
   tag: 'daily',
@@ -105,6 +88,25 @@ const images = [
   width: 960,
   height: 540
 }];
+</script>
+
+<script>
+function openModal(obj) {
+    document.getElementById('myModal').style.display = 'flex';
+    var imgsrc = obj.getAttribute('src');
+    //var imgalt = obj.getAttribute('alt');
+    var modal = document.getElementById('myModal');
+    var modalImg = document.getElementById("modal-image");
+    //var captionText = document.getElementById("caption");
+    modalImg.src = imgsrc;
+    //modalImg.alt =　imgalt;
+    //captionText.innerHTML = imgalt;
+    modal.onclick = function(){
+    modal.style.display = "none";
+    }
+}
+  
+function printContent(index) {
 if(index == 0){
     document.getElementById('page-all').style.color   = "rgba(255,255,255,1.0)";
     document.getElementById('page-daily').style.color = "rgba(255,255,255,0.5)";
@@ -112,7 +114,7 @@ if(index == 0){
     document.getElementById('page-blog').style.color  = "rgba(255,255,255,0.5)";
     const $box = document.getElementById('horizontal-waterfull');
     $box.innerHTML = "";
-    const layout = new ImagesLayout(images, $box.clientWidth, 2);
+    const layout = new ImagesLayout(images, '', $box.clientWidth, 2);
     layout.completedImages.forEach(item => {
     let $imageBox = document.createElement('div')
     $imageBox.setAttribute('class', 'image-box')
@@ -163,6 +165,53 @@ if(index == 0){
     document.getElementById('page-daily').style.color = "rgba(255,255,255,1.0)";
     document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
     document.getElementById('page-blog').style.color  = "rgba(255,255,255,0.5)";
+    const $box = document.getElementById('horizontal-waterfull');
+    $box.innerHTML = "";
+    const layout = new ImagesLayout(images, 'daily', $box.clientWidth, 2);
+    layout.completedImages.forEach(item => {
+    let $imageBox = document.createElement('div')
+    $imageBox.setAttribute('class', 'image-box')
+    $imageBox.style.width = item.width + 'px'
+    $imageBox.style.height = item.height + 'px'
+    let $imagecell = document.createElement('a')
+    let $image = document.createElement('img')
+    $image.setAttribute('onclick', 'openModal(this)')
+    $image.setAttribute('src', item.src)
+    $image.onload = function () {
+           this.style.animationName = 'fadein'
+           this.style.animationDuration = '0.6s'
+    }
+    $imagecell.appendChild($image)
+    $imageBox.appendChild($imagecell)
+    $box.appendChild($imageBox)
+    });
+    
+    var resizeTimer = null;
+    $(window).bind('resize', function () {
+    if (resizeTimer) clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+          const $box = document.getElementById('horizontal-waterfull');
+          document.getElementById('horizontal-waterfull').innerHTML = "";
+          const layout = new ImagesLayout(images, $box.clientWidth, 2);
+          layout.completedImages.forEach(item => {
+          let $imageBox = document.createElement('div')
+          $imageBox.setAttribute('class', 'image-box')
+          $imageBox.style.width = item.width + 'px'
+          $imageBox.style.height = item.height + 'px'
+          let $imagecell = document.createElement('a')
+          let $image = document.createElement('img')
+          $image.setAttribute('onclick', 'openModal(this)')
+          $image.setAttribute('src', item.src)
+          $image.onload = function () {
+              this.style.animationName = 'fadein'
+              this.style.animationDuration = '0.6s'
+          }
+          $imagecell.appendChild($image)
+          $imageBox.appendChild($imagecell)
+          $box.appendChild($imageBox)
+        });
+      }, 300);
+    });     
     
   }
   else if(index==2){
