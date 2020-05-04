@@ -37,12 +37,15 @@ class ImagesLayout {
 
   // 将图片列表根据单行数量分块并开始计算布局
   chunkAndLayout () {
+    console.log(this.filter);
     if(this.filter != ''){
+      console.log('path1');
       for (let i = 0; i < this.images.length; i++) {
         if(this.images[i].tag == this.filter)
           this.filteredImage.push(this.images[i])
       }
     }else{
+      console.log('path2');
       this.filterImage = this.images
     }
       
