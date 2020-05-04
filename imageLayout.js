@@ -44,7 +44,7 @@ class ImagesLayout {
           this.filteredImage.push(this.images[i])
       }
     }else{
-      this.filterImages = this.images
+      this.filteredImages = this.images
     }
       
     // 当图片只有一张时，完整显示这张图片    
