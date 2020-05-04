@@ -94,6 +94,7 @@ const images = [
   height: 540
 }];
 if(index == 0){
+    document.getElementById('page-all').style.color = "#fff";
     const $box = document.getElementById('horizontal-waterfull');
     const layout = new ImagesLayout(images, $box.clientWidth, 2);
     layout.completedImages.forEach(item => {
