@@ -108,27 +108,33 @@ function openModal(obj) {
 }
   
 function printLayout(index){
-    const tag = ['', 'daily', 'event'];
-    const $box = document.getElementById('horizontal-waterfull');
-    $box.innerHTML = "";
-    const layout = new ImagesLayout(images, tag[index], $box.clientWidth, 2);
-    layout.completedImages.forEach(item => {
-    let $imageBox = document.createElement('div')
-    $imageBox.setAttribute('class', 'image-box')
-    $imageBox.style.width = item.width + 'px'
-    $imageBox.style.height = item.height + 'px'
-    let $imagecell = document.createElement('a')
-    let $image = document.createElement('img')
-    $image.setAttribute('onclick', 'openModal(this)')
-    $image.setAttribute('src', item.src)
-    $image.onload = function () {
-           this.style.animationName = 'fadein'
-           this.style.animationDuration = '0.6s'
+    if(index==3){
+        $box = document.getElementById('horizontal-waterfull');
+        $box.innerHTML = "";   
+        $("#horizontal-waterfull").load("blog.html");
+    }else{
+        const tag = ['', 'daily', 'event'];
+        $box = document.getElementById('horizontal-waterfull');
+        $box.innerHTML = "";
+        const layout = new ImagesLayout(images, tag[index], $box.clientWidth, 2);
+        layout.completedImages.forEach(item => {
+        let $imageBox = document.createElement('div')
+        $imageBox.setAttribute('class', 'image-box')
+        $imageBox.style.width = item.width + 'px'
+        $imageBox.style.height = item.height + 'px'
+        let $imagecell = document.createElement('a')
+        let $image = document.createElement('img')
+        $image.setAttribute('onclick', 'openModal(this)')
+        $image.setAttribute('src', item.src)
+        $image.onload = function () {
+               this.style.animationName = 'fadein'
+               this.style.animationDuration = '0.6s'
+        }
+        $imagecell.appendChild($image)
+        $imageBox.appendChild($imagecell)
+        $box.appendChild($imageBox)
+        });
     }
-    $imagecell.appendChild($image)
-    $imageBox.appendChild($imagecell)
-    $box.appendChild($imageBox)
-    });
 }
   
 function printContent(index) {
@@ -176,10 +182,7 @@ if(index == 0){
     document.getElementById('page-daily').style.color = "rgba(255,255,255,0.5)";
     document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
     document.getElementById('page-blog').style.color  = "rgba(255,255,255,1.0)";
-    $box = document.getElementById('horizontal-waterfull');
-    $box.innerHTML = "";   
-    $("#horizontal-waterfull").load("blog.html");
-    var resizeTimer = null;
+    printLayout(index);
     $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(printLayout(index), 300);
