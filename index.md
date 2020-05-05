@@ -189,10 +189,19 @@ if(index == 0){
     });  
   }
 }
-function openBlog(pageUrl){
+
+function printBlog(pageUrl){
     $box = document.getElementById('horizontal-waterfull');
     $box.innerHTML = ""; 
     $("#horizontal-waterfull").load("pageUrl");
+}
+
+function openBlog(pageUrl){
+    printBlog(pageUrl);
+    $(window).bind('resize', function () {
+    if (resizeTimer) clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(printBlog(pageUrl), 300);
+    });      
 }
 printContent(0);
 </script>
