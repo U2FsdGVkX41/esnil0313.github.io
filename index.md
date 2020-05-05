@@ -183,6 +183,7 @@ if(index == 0){
     document.getElementById('page-event').style.color = "rgba(255,255,255,0.5)";
     document.getElementById('page-blog').style.color  = "rgba(255,255,255,1.0)";
     printLayout(index);
+    var resizeTimer = null;
     $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(printLayout(index), 300);
@@ -193,15 +194,13 @@ if(index == 0){
 function printBlog(pageUrl){
     $box = document.getElementById('horizontal-waterfull');
     $box.innerHTML = ""; 
-    console.log("opening:" + pageUrl);
     $("#horizontal-waterfull").load(pageUrl);
 }
 
 function openBlog(item){
-    console.log("item:" + item);
     var pageUrl = item.getAttribute('data-url');
-    console.log("get pageUrl:" + pageUrl);
     printBlog(pageUrl);
+    var resizeTimer = null;
     $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
     resizeTimer = setTimeout(printBlog(pageUrl), 300);
