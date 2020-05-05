@@ -1,5 +1,5 @@
 ---
-layout: blogframe 
+layout: post 
 title: "Deghost for Pixel Shift Multi Shooting"
 date: 2020-05-05
 stamp: "May  5, 2020 " 
