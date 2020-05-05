@@ -197,6 +197,7 @@ function printBlog(pageUrl){
 }
 
 function openBlog(pageUrl){
+    console.log(pageUrl);
     printBlog(pageUrl);
     $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
