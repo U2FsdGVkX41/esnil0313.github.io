@@ -194,7 +194,7 @@ function printBlog(pageUrl){
     $box = document.getElementById('horizontal-waterfull');
     $box.innerHTML = ""; 
     console.log("opening:" + pageUrl);
-    $("#horizontal-waterfull").load("pageUrl");
+    $("#horizontal-waterfull").load(pageUrl);
 }
 
 function openBlog(item){
