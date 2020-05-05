@@ -197,9 +197,9 @@ function printBlog(pageUrl){
 }
 
 function openBlog(item){
-    console.log(item);
+    console.log("item:" + item);
     var pageUrl = item.getAttribute('data-url');
-    console.log(pageUrl);
+    console.log("pageUrl" + pageUrl);
     printBlog(pageUrl);
     $(window).bind('resize', function () {
     if (resizeTimer) clearTimeout(resizeTimer);
