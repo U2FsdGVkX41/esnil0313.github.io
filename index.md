@@ -13,7 +13,7 @@ title: Chasing the faux.
   <!--<div id="caption" style="font-weight: 600"></div>-->
 </div>
 
-<script src="./jquery-3.5.1.js"></script>
+<script src="./jquery-2.2.4.js"></script>
 <script src="./imageLayout.js"></script>
 <script>
   const images = [
