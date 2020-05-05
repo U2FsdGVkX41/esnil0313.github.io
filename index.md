@@ -179,7 +179,6 @@ if(index == 0){
     document.getElementById('page-blog').style.color  = "rgba(255,255,255,1.0)";
     const $box = document.getElementById('horizontal-waterfull');
     $box.innerHTML = "";   
-    //$box.innerHTML = '<object type="text/html" data="blog.html" width="100%" height="100%"></object>';
     
     var resizeTimer = null;
     $(window).bind('resize', function () {
