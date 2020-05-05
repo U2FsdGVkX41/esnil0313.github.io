@@ -197,6 +197,7 @@ function printBlog(pageUrl){
 }
 
 function openBlog(item){
+    console.log(item);
     var pageUrl = item.getAttribute('data-url');
     console.log(pageUrl);
     printBlog(pageUrl);
