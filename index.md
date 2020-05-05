@@ -108,7 +108,6 @@ function openModal(obj) {
 }
   
 function printLayout(index){
-    if(index==3) return;
     const tag = ['', 'daily', 'event'];
     const $box = document.getElementById('horizontal-waterfull');
     $box.innerHTML = "";
