@@ -189,6 +189,10 @@ if(index == 0){
     });  
   }
 }
-
+function openBlog(pageUrl){
+    $box = document.getElementById('horizontal-waterfull');
+    $box.innerHTML = ""; 
+    $("#horizontal-waterfull").load("pageUrl");
+}
 printContent(0);
 </script>
