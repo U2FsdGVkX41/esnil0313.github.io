@@ -196,7 +196,8 @@ function printBlog(pageUrl){
     $("#horizontal-waterfull").load("pageUrl");
 }
 
-function openBlog(pageUrl){
+function openBlog(item){
+    var pageUrl = item.getAttribute('data-url');
     console.log(pageUrl);
     printBlog(pageUrl);
     $(window).bind('resize', function () {
