@@ -1,7 +1,7 @@
 ---
 layout: default
 published: true
-title: Chasing the faux.
+title: Known the facts, chasing the faux.
 ---
 {% include bgm.html %}
 
